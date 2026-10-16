@@ -1,0 +1,29 @@
+---
+title: Research
+permalink: /research/
+description: >-
+  Research by Rimmy E. Tomy on regulation and enforcement in the financial
+  sector, credit access in developing markets, and accounting information.
+---
+{%- comment -%}
+  The papers on this page are listed in _data/research.yml. Edit that file,
+  not this one, to add or change papers.
+{%- endcomment -%}
+<h1 class="page-title">Research</h1>
+
+<nav class="toc" aria-label="Research areas">
+  <ul>
+    {%- for area in site.data.research %}
+    <li><a href="#{{ area.section | slugify }}">{{ area.section }}</a></li>
+    {%- endfor %}
+  </ul>
+</nav>
+
+{% for area in site.data.research %}
+<section class="research-area" id="{{ area.section | slugify }}">
+  <h2>{{ area.section }}</h2>
+  {%- for paper in area.papers %}
+  {% include paper.html paper=paper %}
+  {%- endfor %}
+</section>
+{% endfor %}

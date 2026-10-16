@@ -1,0 +1,84 @@
+{%- comment -%}
+  One paper on the Research page. The content comes from _data/research.yml.
+{%- endcomment -%}
+{%- assign p = include.paper -%}
+<article class="paper{% if p.image %} has-figure{% endif %}" id="{{ p.title | slugify }}">
+  {%- if p.image %}
+  <figure class="paper-figure">
+    <a href="{% include url.html url=p.image %}"><img src="{% include url.html url=p.image %}" alt="{{ p.image_alt | default: '' | escape }}" loading="lazy"></a>
+  </figure>
+  {%- endif %}
+  <h3 class="paper-title">
+    {%- if p.url -%}
+    <a href="{% include url.html url=p.url %}">{{ p.title | smartify }}</a>
+    {%- else -%}
+    {{ p.title | smartify }}
+    {%- endif -%}
+  </h3>
+  {%- if p.coauthors %}
+  <p class="paper-authors">with {{ p.coauthors | smartify }}</p>
+  {%- endif %}
+  <p class="paper-venue">
+    {%- if p.journal -%}
+    <cite>{{ p.journal | smartify }}</cite>{% if p.citation %}, {{ p.citation | smartify }}{% endif %}
+    {%- else -%}
+    <span class="status">{{ p.status | default: "Working paper" | smartify }}</span>
+    {%- endif -%}
+  </p>
+
+  {%- if p.abstract %}
+  <details class="abstract">
+    <summary>Abstract</summary>
+    <div class="abstract-body">
+      {{ p.abstract | markdownify }}
+    </div>
+  </details>
+  {%- endif %}
+
+  {%- if p.note or p.materials %}
+  <div class="paper-block">
+    <h4 class="label">Materials</h4>
+    {%- if p.note %}
+    <p class="note">{{ p.note | smartify }}</p>
+    {%- endif %}
+    {%- if p.materials %}
+    <ul class="chips">
+      {%- for m in p.materials %}
+      <li><a class="chip" href="{% include url.html url=m.url %}">{{ m.label | smartify }}</a></li>
+      {%- endfor %}
+    </ul>
+    {%- endif %}
+  </div>
+  {%- endif %}
+
+  {%- if p.awards %}
+  <div class="paper-block">
+    <h4 class="label">Awards</h4>
+    <ul class="awards">
+      {%- for a in p.awards %}
+      <li>{{ a | smartify }}</li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
+
+  {%- if p.media %}
+  <div class="paper-block">
+    <h4 class="label">Media</h4>
+    <ul class="media">
+      {%- for m in p.media %}
+      <li>
+        {%- if m.url -%}
+        <a href="{% include url.html url=m.url %}">{{ m.title | smartify }}</a>
+        {%- else -%}
+        {{ m.title | smartify }}
+        {%- endif -%}
+        {%- if m.outlet %}, <span class="outlet">{{ m.outlet | smartify }}</span>{% endif -%}
+        {%- if m.date %}, {{ m.date }}{% endif -%}
+        {%- if m.pdf %} (<a href="{% include url.html url=m.pdf %}">PDF</a>){% endif -%}
+      </li>
+      {%- endfor %}
+    </ul>
+  </div>
+  {%- endif %}
+</article>

@@ -1,0 +1,73 @@
+# -----------------------------------------------------------------------------
+#  SITE SETTINGS
+#  Your name, title and contact details used across the site.
+#  After you save a change, the live site updates within a minute or two.
+# -----------------------------------------------------------------------------
+
+title: Rimmy E. Tomy
+tagline: Associate Professor of Accounting, Penn State Smeal College of Business
+description: >-
+  Rimmy E. Tomy is an Associate Professor of Accounting at Penn State Smeal
+  College of Business who studies regulation and enforcement in the financial
+  sector.
+lang: en
+timezone: America/New_York
+
+# The address of the live site.
+url: "https://rtomy.github.io"
+baseurl: ""
+
+author:
+  name: Rimmy E. Tomy
+  position: Associate Professor of Accounting
+  institution: Penn State Smeal College of Business
+  email: rtomy@psu.edu
+  linkedin: https://www.linkedin.com/in/rimmy-e-tomy-0235472b7/
+  # Photo on the home page. To change it, upload a new photo to the files
+  # folder and put its name here (also in index.md, for link previews).
+  photo: files/Tomy_photo2.jpg
+
+# Your CV. To update it, upload a new PDF with exactly this name to the files
+# folder; it replaces the old one.
+cv: files/CV_Tomy.pdf
+
+# The menu at the top of every page.
+nav:
+  - title: Home
+    url: /
+  - title: Research
+    url: /research/
+  - title: CV
+    url: /files/CV_Tomy.pdf
+
+# Small square preview (rather than a wide banner) when the site is shared.
+twitter:
+  card: summary
+
+# Profiles listed in search-engine data about you.
+social:
+  name: Rimmy E. Tomy
+  links:
+    - https://www.linkedin.com/in/rimmy-e-tomy-0235472b7/
+
+# -----------------------------------------------------------------------------
+#  Technical settings. You should not need to change anything below.
+# -----------------------------------------------------------------------------
+markdown: kramdown
+kramdown:
+  input: GFM
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+exclude:
+  - README.md
+  - CLAUDE.md
+  - scripts
+  - Gemfile
+  - Gemfile.lock
+  - vendor

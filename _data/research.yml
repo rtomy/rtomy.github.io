@@ -1,0 +1,304 @@
+# =============================================================================
+#  RESEARCH PAGE
+#  Everything on the Research page comes from this file, in this order.
+#
+#  TO ADD A PAPER
+#    1. Copy an existing paper: every line from its "- title:" down to the
+#       line just before the next "- title:".
+#    2. Paste it where it should appear and change the text.
+#    3. Delete any lines you don't need (for example awards or media).
+#
+#  RULES THAT KEEP THE PAGE WORKING
+#    * The spaces at the start of each line matter. Line new lines up exactly
+#      with the ones around them. Use spaces, never tabs.
+#    * Put titles inside "double quotes".
+#    * Write the abstract on the lines below "abstract: |", indented like the
+#      others, with a blank line between paragraphs.
+#    * A link to one of your own files looks like files/NAME.pdf (upload the
+#      file to the files folder first). Any other link is a full web address
+#      starting with https://
+#    * Lines starting with # (like these) are notes and never appear on the site.
+#
+#  EVERY FIELD A PAPER CAN HAVE (only "title" is required)
+#
+#    - title: "Paper title"
+#      url: https://doi.org/...                  # where the title links to
+#      coauthors: Jane Doe and John Roe          # leave out if sole-authored
+#      journal: Journal of Accounting Research   # leave out for working papers
+#      citation: 2024, 62(2), 505-549
+#      status: Working paper                     # shown when there is no journal
+#      image: files/figure.png                   # optional figure
+#      image_alt: "What the figure shows"
+#      abstract: |
+#        First paragraph.
+#
+#        Second paragraph.
+#      note: "A sentence shown above the supporting materials."
+#      materials:                                # buttons for appendices etc.
+#        - label: Online Appendix
+#          url: files/appendix.pdf
+#      awards:
+#        - "Best Paper Award, Some Conference"
+#      media:
+#        - title: "Headline of the article"
+#          outlet: Chicago Booth Review
+#          date: April 19, 2017
+#          url: https://...
+#          pdf: files/article.pdf                # optional link to a PDF copy
+# =============================================================================
+
+
+# -----------------------------------------------------------------------------
+- section: Regulation and enforcement in the financial sector
+  papers:
+
+    - title: "Threat of entry and the use of discretion in banks' financial reporting"
+      url: https://www.sciencedirect.com/science/article/pii/S0165410118300387
+      journal: Journal of Accounting and Economics
+      citation: 2019, 67(1), 1-35
+      image: files/Threat_of_entry.jpg
+      image_alt: "Map of the United States with locations marked by red dots"
+      abstract: |
+        This paper studies managers' use of accounting discretion to deter entry. Using state-level changes in branching regulation under the Interstate Banking and Branching Efficiency Act, I find geographically-constrained community banks increased their loan loss provisions to appear less profitable when faced with the threat of entry by competitors. Additional tests rule out alternative explanations that firm economics or regulators drove the increase. I complement my analyses with survey-based evidence. Findings from the survey confirm that banks prefer to locate in markets where incumbents have high profitability and low credit losses, and that banks use competitors' financial statements to analyze competition.
+      note: "As part of this study, I conducted a survey of community bankers. Details related to the survey can be found in Appendix A of the paper, as well as here:"
+      materials:
+        - label: Competition in Community Banking Survey
+          url: files/survey.pdf
+        - label: Survey Instrument
+          url: files/survey_tool.pdf
+      media:
+        - title: "Do Companies Camouflage Their Results to Scare Off Competitors?"
+          outlet: Chicago Booth Review
+          date: April 19, 2017
+          url: https://www.chicagobooth.edu/review/do-companies-camouflage-their-results-scare-competitors?sc_lang=en
+
+    - title: "Observing Enforcement: Evidence from Banking"
+      url: https://onlinelibrary.wiley.com/doi/10.1111/1475-679X.12422
+      coauthors: Anya Kleymenova
+      journal: Journal of Accounting Research
+      citation: 2022, 60(4), 1583-1633
+      image: files/Observing_enforcement.png
+      image_alt: "Chart of the number of enforcement decisions and orders (EDOs) per year, 1990 to 2017, with their mean and median length"
+      abstract: |
+        This paper finds that the disclosure of supervisory actions by bank regulators is associated with changes in their enforcement behavior. Using a novel sample of enforcement decisions and orders (EDOs) and a change in the disclosure regime, we find that regulators issue more EDOs, intervene sooner, and rely more on publicly observable signals following the regime change. EDO documents become longer, more complex, and contain more boilerplate language. Our results also indicate that intervention happens sooner and more frequently in counties with higher news circulation, which suggests that regulators take into account the public perception of their actions. We evaluate potentially confounding factors, including the savings and loan (S&L) crisis and competition from thrifts, and find robust results. We also study bank outcomes and document that uninsured deposits decline at EDO banks in the disclosure regime, especially for those covered in the news. Finally, we observe that bank failure accelerates despite improvements in capital ratios and asset quality. Overall, our research provides new insights on the disclosure of regulatory actions.
+      materials:
+        - label: Online Appendix
+          url: files/KT_Observing_Enforcement_OnlineAppendix.pdf
+      awards:
+        - "2019 Bureau Van Dijk Best Paper Award in Banking, Sydney Banking and Financial Stability Conference"
+        - "2020 EFA Best Paper Award"
+      media:
+        - title: "Banking Regulators Operate Differently under Public Scrutiny"
+          outlet: Chicago Booth Review
+          date: October 01, 2020
+          url: https://www.chicagobooth.edu/review/banking-regulators-operate-differently-under-public-scrutiny?sc_lang=en
+
+    - title: "Bank Supervision and Organizational Capital: The Case of Minority Lending"
+      url: https://doi.org/10.1111/1475-679X.12529
+      coauthors: Byeongchan An, Robert Bushman and Anya Kleymenova
+      journal: Journal of Accounting Research
+      citation: 2024, 62(2), 505-549
+      image: files/Bank_supervision.png
+      image_alt: "Bar charts of changes in mortgage portfolio share and market share for minority and Black or African American borrowers during and after EDOs"
+      abstract: |
+        Racial disparities in mortgage lending have important welfare implications. We investigate whether improvements in banks' organizational capital and associated control systems facilitate increased lending to minority borrowers. We focus on bank supervisors' enforcement decisions and orders (EDOs) against banks, which can enforce changes in banks' internal processes, procedures, and management practices. We hypothesize that EDO-imposed improvements in loan policies, internal governance, and employee training mitigate deficiencies in credit assessments and lending decisions that previously disadvantaged minority borrowers. We find that relative to white borrowers, mortgage lending to minority borrowers significantly increases following the resolution of EDOs, where this positive effect increases with the strictness of bank supervisors and the severity of the EDO. Using a semi-supervised machine learning method to analyze and quantify the text of EDOs, we find that increases in minority lending are significantly higher for EDOs specifying revisions of loan policies, implementation of formal internal governance procedures, or more employee training, especially in areas with a high proportion of subprime borrowers. Overall, we find that EDO-driven improvements in organizational capital generate unintended, positive social externalities that enhance access to credit for minority borrowers.
+      materials:
+        - label: Online Appendix
+          url: files/ABKT_Online_Appendix.pdf
+      media:
+        - title: "How Fixing Troubled Banks Can Help Minorities and Women"
+          outlet: Chicago Booth Review
+          date: October 03, 2022
+          url: https://www.chicagobooth.edu/review/how-fixing-troubled-banks-can-help-minorities-women?sc_lang=en
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: February 23, 2023
+          url: https://bfi.uchicago.edu/insight/research-summary/bank-supervision-and-managerial-control-systems-the-case-of-minority-lending/
+
+    - title: "Trust in Banks and Borrower Behavior"
+      url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5384682
+      coauthors: Samuel Chang and Jizhou Wang
+      status: Working paper
+      image: files/Trust_in_banks.png
+      image_alt: "Line chart of the probability of loan delinquency by months since origination, for loans made before, during and after an EDO and for control loans"
+      abstract: |
+        We examine how trust shapes retail borrowers' decisions to transact with banks, using regulatory enforcement actions as reputational shocks that erode consumers' confidence. Survey data confirm that enforcement actions are associated with significant declines in trust in banks and bankers. Using granular loan data from TransUnion linking borrowers to lenders, we find that higher-quality borrowers exit sanctioned banks. Consistent with a trust-based mechanism, higher-quality borrowers also leave unsanctioned banks and migrate to nonbank financial institutions, reducing their overall exposure to the banking sector. Sanctioned banks retain fewer repeat borrowers, and the shift toward lower-quality borrowers intensifies as survey-based trust declines and local news coverage becomes negative. In contrast, borrower quality shows little change when local news is positive or conveys trust, and in regions without local news outlets, underscoring the media's role in contextualizing news and shaping consumers' trust. Additional tests indicate these findings are inconsistent with supply-side explanations.
+      media:
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: August 27, 2025
+          url: https://bfi.uchicago.edu/insights/trust-in-banks-and-borrower-behavior-evidence-from-supervisory-actions-and-local-information-quality/
+
+    - title: "Bank Regulators and Climate Action: Evidence from Supervisory Guidance"
+      url: files/Central_bank_climate.pdf
+      coauthors: Kirill Skobelev
+      status: Working paper
+      image: files/bank_regulators.png
+      image_alt: "Heat maps of coefficients on comments' climate engagement, by simulated regulator role and language model, for U.S. bank regulators and the SEC"
+      abstract: |
+        U.S. bank regulators generally view their role as overseeing banks' exposure to climate-related risks rather than actively shaping climate policy. However, the boundary between risk oversight and policy advocacy is a gray area. We examine how U.S. bank regulators navigate this boundary by analyzing the rulemaking process for the 2023 interagency guidance on climate-related financial risk management. Our analysis consists of two parts.
+
+        First, we examine the role of public pressure in shaping the final guidance. Using large language models (LLMs) to classify the public comments submitted on the draft, we find that the comments are highly polarized: the majority of individuals and climate advocacy groups support climate action by bank regulators, while banks and banking associations oppose it. We then construct textual alignment measures between each comment and the corresponding paragraphs in the draft and final guidance, and find that highly climate-engaged comments are less likely to be reflected in the final version, suggesting regulators discounted pro-climate advocacy.
+
+        Second, we use LLMs to simulate regulators operating under different incentives. We implement a two-stage procedure in which the LLM first decides which public comments a regulator in a given role would accept, then revises the draft guidance using only those accepted comments. The evidence at the first stage is robust: both commercial and fine-tuned LLMs systematically accept or reject comments in line with their assigned role. In the second stage, we find suggestive evidence that regulators' revisions resemble those of a risk-averse bureaucrat most closely. However, the second stage outcomes are sensitive to the choice of model, echoing cautions in the literature on using LLMs as human surrogates.
+
+
+# -----------------------------------------------------------------------------
+- section: Financial sector enforcement and credit access in developing markets
+  papers:
+
+    - title: "Community Membership and Reciprocity in Lending: Evidence from Informal Markets"
+      url: https://doi.org/10.1016/j.jacceco.2024.101697
+      coauthors: Regina Wittenberg-Moerman
+      journal: Journal of Accounting and Economics
+      citation: 2024, 78(1), 101697
+      image: files/community_membership.jpg
+      image_alt: "A crowded bazaar lane lined with vendors and sacks of produce"
+      abstract: |
+        We study credit access in informal economies where market institutions, such as financial reporting systems, auditing, and courts, are nonexistent or function poorly. Using the setting of a large bazaar in India, we find that community membership plays a vital role in access to credit. Wholesalers are more likely to provide credit and offer greater amounts of credit to within-community retailers, and are more lenient when these retailers are delinquent. Furthermore, wholesalers who lent preferentially to their community retailers pre-COVID are more likely to receive help from their community following the COVID-19--related income shock, particularly from same-community landlords and suppliers. Also, wholesalers with low endowments, those with greater within-community information flow about them, and those facing income shocks are more likely to provide preferential credit to their community retailers. Our findings are consistent with an indirect reciprocity mechanism explaining within-community credit flows.
+      media:
+        - title: "The Informal Sector Needs Better Books"
+          outlet: The Hindu BusinessLine
+          date: January 21, 2026
+          url: https://www.thehindubusinessline.com/opinion/the-informal-sector-needs-better-books/article70533369.ece
+          pdf: files/The_Informal_Sector_Needs_Better_Books.pdf
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: October 21, 2021
+          url: https://bfi.uchicago.edu/wp-content/uploads/2021/10/BFI_RB_Tomy_101421.pdf
+        - title: "In Some Places, Community Is Key to Who Gets Commercial Credit"
+          outlet: Chicago Booth Review
+          date: December 21, 2021
+          url: https://www.chicagobooth.edu/review/in-some-places-community-is-key-who-gets-commercial-credit?sc_lang=en
+        - title: "The Equation: The Community Ties That Count"
+          outlet: Chicago Booth Review
+          date: January 27, 2022
+          url: https://www.chicagobooth.edu/review/the-equation-community-ties-that-count?sc_lang=en
+
+    - title: "Information Preference and Credit Allocation in a Bazaar Economy"
+      url: https://pubsonline.informs.org/doi/10.1287/mnsc.2023.04197
+      coauthors: Regina Wittenberg-Moerman
+      journal: Management Science
+      citation: 2025, 71(12), 10642-10670
+      image: files/Information_preference.png
+      image_alt: "Screen from the choice experiment comparing two retailers on community, profits, relationship length, sales and trade credit"
+      abstract: |
+        Traders operating in informal economies tend to use non-accounting metrics in their credit allocation decisions. By using a combination of survey questions and a hypothetical choice experiment, we explore wholesalers' preferences for retailers' accounting information and, importantly, the reasons for its limited use. Based on estimates of wholesalers' willingness to pay for retailer information, we find that although wholesalers continue to value non-accounting information such as retailers' community membership and relationship length, they also overwhelmingly value their sales and profits in making credit decisions. However, wholesalers do not use accounting information because they perceive it to be unreliable, and retailers do not share this information because they feel it will be misused. Our findings suggest that improving the reliability of accounting information and preventing its misuse will increase the use of such information in credit allocation in informal markets.
+      media:
+        - title: "How to Supercharge Tiny Businesses"
+          outlet: Chicago Booth Review
+          date: April 30, 2026
+          url: https://www.chicagobooth.edu/review/how-supercharge-tiny-businesses
+        - title: "Tackling the Trust Factor in Informal Sector Credit"
+          outlet: The Hindu BusinessLine
+          date: February 20, 2025
+          url: https://www.thehindubusinessline.com/opinion/tackling-the-trust-factor-in-informal-sector-credit/article69244032.ece
+          pdf: files/Tackling_the_trust_factor.pdf
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: March 15, 2023
+          url: https://bfi.uchicago.edu/wp-content/uploads/2023/03/BFI_RB_Tomy_031023.pdf
+        - title: "In Informal Markets, Trustworthy Data Are Key"
+          outlet: Chicago Booth Review
+          date: September 04, 2023
+          url: https://www.chicagobooth.edu/review/in-informal-markets-trustworthy-data-are-key
+
+    - title: "Accounting and the Informal Economy: A Review and Discussion"
+      url: https://doi.org/10.1016/j.jacceco.2026.101927
+      journal: Journal of Accounting and Economics
+      citation: Forthcoming
+
+    - title: "Banking on Trust: Supervisory Transparency and Depositors' Actions"
+      url: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=4586886
+      coauthors: Abhiman Das and Tanmoy Majilla
+      status: Working paper
+      image: files/treatment_map.png
+      image_alt: "Map of India with bank branch locations marked in two colors"
+      abstract: |
+        We explore the role of institutional trust in influencing depositors' reactions to bank supervisory actions in India. Utilizing a unique event that led to unexpected penalties on banks and the quasi-random nature of branch locations, we find news of penalties on some banks leading to deposit withdrawals from offending and neighboring nonoffending branches. Such withdrawals are more pronounced in regions with lower trust in public institutions, including trust in courts and banks. Trust is associated with information access and the quality of local services. We find limited evidence that credit and economic activity also decline in regions with deposit withdrawals.
+      media:
+        - title: "HDFC issue flags lack of transparency"
+          outlet: The Hindu BusinessLine
+          date: March 26, 2026
+          url: https://www.thehindubusinessline.com/opinion/hdfc-issue-flags-lack-of-transparency/article70784887.ece
+          pdf: files/Banking_on_Trust_oped_March2026.pdf
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: July 11, 2024
+          url: https://bfi.uchicago.edu/wp-content/uploads/2024/07/Banking-on-Trust.pdf
+        - title: "Are Big Bank Penalties Good or Bad for the Financial System?"
+          outlet: Chicago Booth Review
+          date: October 08, 2024
+          url: https://www.chicagobooth.edu/review/are-big-bank-penalties-good-bad-financial-system
+
+
+# -----------------------------------------------------------------------------
+- section: Regulation and enforcement in the broader economy
+  papers:
+
+    - title: "Out of Site, Out of Mind? The Role of the Government-Appointed Corporate Monitor"
+      url: https://doi.org/10.1111/1475-679X.12502
+      coauthors: Lindsey Gallo and Kendall Lynch
+      journal: Journal of Accounting Research
+      citation: 2023, 61(5), 1633-1698
+      image: files/Out_of_site.png
+      image_alt: "Bar chart of deferred prosecution agreements per year, 2001 to 2019, with and without a corporate monitor"
+      abstract: |
+        We study the role of a relatively new type of external firm monitor, an on-site government-appointed Corporate Monitor, and assess whether such appointments reduce firms' propensity to violate laws. Using a sample of deferred and non-prosecution agreements, we first document the determinants of Monitor-appointment. We find firms that voluntarily disclose wrongdoing and have more independent directors are less likely to have Corporate Monitors, whereas those with more severe infractions, mandated board changes, and increased cooperation requirements are more likely to have Monitors. We find such appointments are associated with an 18%-25% reduction in violations while the Monitor is on site, however, the effect does not persist after the Monitorship ends. Using a semi-supervised machine learning method to measure changes in firms' ethics and compliance norms, we find that the reduction in violations is associated with changes in ethics and compliance that also do not persist. Finally, we document that firms under Monitorship experience a persistent reduction in innovation, highlighting a previously unexplored cost of these interventions. Overall, our results suggest that, although Corporate Monitors on site are associated with fewer violations, firms revert to previous levels of violations following Monitors' departure.
+      materials:
+        - label: Online Appendix
+          url: files/GLT_Corporate_Monitor_OnlineAppendix.pdf
+      awards:
+        - "The 2022-23 Glen McLaughlin Prize for Research in Accounting Ethics (Steed School of Accounting, University of Oklahoma)"
+      media:
+        - title: "A Way to Keep Errant Companies in Line—for Awhile"
+          outlet: Chicago Booth Review
+          date: April 07, 2021
+          url: https://www.chicagobooth.edu/review/way-keep-errant-companies-line-awhile?sc_lang=en
+
+    - title: "Repatriation Taxes and Foreign Cash Holdings: The Impact of Anticipated Tax Reform"
+      url: https://doi.org/10.1093/rfs/hhy124
+      coauthors: Lisa De Simone and Joseph Piotroski
+      journal: The Review of Financial Studies
+      citation: 2019, 32(8), 3105-3143
+      abstract: |
+        We examine whether an anticipated reduction in future repatriation taxes affects the amount of cash U.S. multinationals hold overseas. We find that the expected benefits of a repatriation tax reduction are positively associated with accelerated accumulations of global cash holdings once Congress proposed legislation. Additional tests examining domestic and foreign corporations, voluntary disclosures of foreign cash, and corporate payout behavior support our conclusion that observed increases in excess global cash are driven by changes in foreign cash. We also document that U.S. multinationals accumulating excess cash engage in complementary organizational and financial reporting activities designed to maximize expected tax benefits.
+      media:
+        - title: "Cutting taxes on profits earned abroad would be a pointless giveaway"
+          outlet: The Economist
+          date: September 09, 2017
+          url: https://www.economist.com/united-states/2017/09/09/cutting-taxes-on-profits-earned-abroad-would-be-a-pointless-giveaway
+        - title: "Why the Prospect of a Lower Tax Bill Leads US Companies to Move Profits Abroad"
+          outlet: Chicago Booth Review
+          date: December 01, 2017
+          url: https://www.chicagobooth.edu/review/why-prospect-lower-tax-bill-leads-us-companies-move-profits-abroad?sc_lang=en
+        - title: "The King's Dilemma"
+          outlet: Chicago Booth Review
+          date: Spring, 2018
+          url: files/CBR_Spring2018_Kings_Dilemma.pdf
+
+
+# -----------------------------------------------------------------------------
+- section: Accounting information and productivity
+  papers:
+
+    - title: "Supply Chain Shocks and Firm Productivity: The Role of Reporting Quality"
+      url: https://doi.org/10.1016/j.jacceco.2025.101833
+      coauthors: Philip Berger
+      journal: Journal of Accounting and Economics
+      citation: 2026, 81(2), 101833
+      image: files/Taiwan_map.png
+      image_alt: "Map of Taiwan showing semiconductor plant locations and earthquake intensity contours"
+      abstract: |
+        We examine the role of accounting information quality in firms' responses to a supply chain shock. Large bodies of research examine the role of accounting quality in recurring operating or investing decisions, but evidence is lacking on how the quality of accounting information relates to how well firms restructure in the face of a disruptive shock. Our shock is the 1999 Taiwan earthquake, which negatively impacted a subset of US high-technology manufacturing firms by disrupting their supply chains. We find total factor productivity increases for affected US high-tech firms relative to unaffected ones. We also find that affected firms increase their productivity more if they have higher pre-shock accounting quality. Finally, we investigate the channels by which the accounting quality mechanism operates in our setting and find that better accounting quality reduces information frictions related to management's assessment of the investment opportunity set.
+      awards:
+        - "Best Paper in Corporate Finance, 2018 SFS Cavalcade Asia-Pacific"
+      media:
+        - title: "Insights/Research Brief"
+          outlet: Becker Friedman Institute
+          date: February 12, 2025
+          url: https://bfi.uchicago.edu/insights/supply-chain-shocks-and-firm-productivity-the-role-of-reporting-quality/?occurrence_id=0
+        - title: "Good Accounting Can Make Companies More Resilient"
+          outlet: Chicago Booth Review
+          date: October 09, 2025
+          url: https://www.chicagobooth.edu/review/good-accounting-can-make-companies-more-resilient

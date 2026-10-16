@@ -1,0 +1,22 @@
+---
+layout: default
+---
+<section class="intro{% if site.author.photo %} has-photo{% endif %}">
+  {%- if site.author.photo %}
+  <img class="portrait" src="{% include url.html url=site.author.photo %}" alt="Photo of {{ site.author.name }}">
+  {%- endif %}
+  <div>
+    <h1 class="name">{{ site.author.name }}</h1>
+    <p class="role">{{ site.author.position }}</p>
+    <p class="affiliation">{{ site.author.institution }}</p>
+  </div>
+</section>
+
+<div class="bio">
+{{ content }}
+</div>
+
+<p class="actions">
+  <a class="button primary" href="{{ '/research/' | relative_url }}">Learn about my research</a>
+  <a class="button" href="{% include url.html url=site.cv %}">Curriculum Vitae <span class="file-type">PDF</span></a>
+</p>

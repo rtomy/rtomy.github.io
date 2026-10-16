@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  {% seo %}
+  <link rel="icon" href="{{ '/assets/img/favicon.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="{{ '/assets/img/apple-touch-icon.png' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="site-name" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <nav aria-label="Main">
+        <ul>
+          {%- for item in site.nav %}
+          <li><a href="{% include url.html url=item.url %}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.title }}</a></li>
+          {%- endfor %}
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; {{ site.time | date: "%Y" }} {{ site.author.name }}</p>
+      <ul>
+        {%- if site.author.email %}
+        <li><a href="mailto:{{ site.author.email }}">{{ site.author.email }}</a></li>
+        {%- endif %}
+        {%- if site.author.linkedin %}
+        <li><a href="{{ site.author.linkedin }}">LinkedIn</a></li>
+        {%- endif %}
+        <li>Updated {{ site.time | date: "%B %-d, %Y" }}</li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>

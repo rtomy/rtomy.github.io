@@ -1,0 +1,8 @@
+{%- comment -%}
+  Turns a link from the content files into a working address: full web
+  addresses (https://..., mailto:...) are used as-is; anything else, such as
+  files/paper.pdf, is treated as a file on this site.
+{%- endcomment -%}
+{%- assign u = include.url | strip -%}
+{%- assign head = u | slice: 0, 4 | downcase -%}
+{%- if head == "http" or head == "mail" -%}{{ u }}{%- else -%}{{ u | relative_url }}{%- endif -%}

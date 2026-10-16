@@ -19,3 +19,8 @@ before publishing.
   compiler needed).
 - GitHub Pages only runs whitelisted plugins; this site uses jekyll-seo-tag
   and jekyll-sitemap.
+- Analytics: GoatCounter (`goatcounter:` in `_config.yml`; dashboard at
+  rtomy.goatcounter.com). The script and the PDF-click events are in
+  `_layouts/default.html` and load only in production builds, so local
+  previews are never counted. The owner chose GoatCounter specifically to
+  avoid recording visitor IP addresses.

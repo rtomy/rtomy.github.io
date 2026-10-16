@@ -53,6 +53,16 @@ not be read, most often uneven spaces in `_data/research.yml`. GitHub emails
 you when that happens, and the site keeps showing the previous version until
 the mistake is fixed.
 
+## Visitor statistics
+
+Visits are counted with [GoatCounter](https://www.goatcounter.com), which uses
+no cookies and stores no personal data. See the numbers at
+<https://rtomy.goatcounter.com>: visits per page, countries, where visitors
+came from, and clicks on the PDFs (listed as events, such as
+`files/CV_Tomy.pdf`). Previews on your own Mac are never counted. To stop
+counting your own visits in a browser, open
+<https://rtomy.github.io/#toggle-goatcounter> once in that browser.
+
 ## Making a change with Claude Code
 
 Open Claude Code in this folder and describe the change, for example "add my

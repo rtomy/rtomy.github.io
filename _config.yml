@@ -40,6 +40,11 @@ nav:
   - title: CV
     url: /files/CV_Tomy.pdf
 
+# Visitor statistics with GoatCounter (no cookies, no personal data). This is
+# the name chosen at goatcounter.com; the statistics are then at
+# https://NAME.goatcounter.com. Leave it blank to turn statistics off.
+goatcounter: "rtomy"
+
 # Small square preview (rather than a wide banner) when the site is shared.
 twitter:
   card: summary

@@ -42,5 +42,19 @@
       </ul>
     </div>
   </footer>
+
+  {%- if site.goatcounter and site.goatcounter != "" and jekyll.environment == "production" %}
+  <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+  <script>
+    // Also count clicks on this site's PDFs (CV, papers, appendices) as GoatCounter events.
+    document.addEventListener('click', function (e) {
+      var a = e.target.closest && e.target.closest('a[href]');
+      if (!a || a.host !== location.host || !/\.pdf$/i.test(a.pathname)) return;
+      if (window.goatcounter && window.goatcounter.count) {
+        window.goatcounter.count({ path: a.pathname.replace(/^\//, ''), title: a.textContent.trim(), event: true });
+      }
+    });
+  </script>
+  {%- endif %}
 </body>
 </html>

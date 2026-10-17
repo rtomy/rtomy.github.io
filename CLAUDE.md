@@ -19,6 +19,9 @@ before publishing.
   compiler needed).
 - GitHub Pages only runs whitelisted plugins; this site uses jekyll-seo-tag
   and jekyll-sitemap.
+- `google9bb68badd1917431.html` at the top level is Google Search Console's
+  ownership check. Keep it there unchanged; it is kept out of the sitemap in
+  `_config.yml`.
 - Analytics: GoatCounter (`goatcounter:` in `_config.yml`; dashboard at
   rtomy.goatcounter.com). The script and the PDF-click events are in
   `_layouts/default.html` and load only in production builds, so local

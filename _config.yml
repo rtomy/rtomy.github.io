@@ -69,6 +69,12 @@ defaults:
       path: ""
     values:
       layout: default
+  # Google Search Console ownership check: must stay at the top level of the
+  # site, unchanged, but is not a page to list in the sitemap.
+  - scope:
+      path: "google9bb68badd1917431.html"
+    values:
+      sitemap: false
 exclude:
   - README.md
   - CLAUDE.md

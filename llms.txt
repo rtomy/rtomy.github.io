@@ -1,0 +1,39 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- comment -%}
+  A plain-text summary of the site for AI tools (see llmstxt.org). It is built
+  automatically from _config.yml, index.md and _data/research.yml, so there is
+  nothing to edit here.
+{%- endcomment -%}
+{%- capture nl %}
+{% endcapture -%}
+{%- assign home = site.pages | where: "url", "/" | first -%}
+# {{ site.author.name }}
+
+> {{ site.description | strip }}
+
+{{ home.content | strip_html | strip }}
+
+- Website: {{ "/" | absolute_url }}
+- All papers with abstracts: {{ "/research/" | absolute_url }}
+- CV (PDF): {{ site.cv | absolute_url }}
+- Email: {{ site.author.email }}
+{%- for link in site.social.links %}
+- Profile: {{ link }}
+{%- endfor %}
+{% for area in site.data.research %}
+## {{ area.section }}
+{% for p in area.papers %}
+{%- assign head = p.url | slice: 0, 4 | downcase -%}
+{%- if head == "http" -%}{%- assign link = p.url -%}{%- else -%}{%- assign link = p.url | absolute_url -%}{%- endif %}
+- [{{ p.title }}]({{ link }}): {% if p.coauthors %}With {{ p.coauthors }}. {% else %}Sole-authored. {% endif %}
+  {%- if p.journal %}{{ p.journal }}{% if p.citation %}, {{ p.citation }}{% endif %}.{% else %}{{ p.status | default: "Working paper" }}.{% endif %}
+  {%- if p.abstract %} Abstract: {{ p.abstract | replace: nl, " " | replace: "  ", " " | strip }}{% endif %}
+  {%- if p.materials %} Supporting materials: {% for m in p.materials %}{% assign mh = m.url | slice: 0, 4 | downcase %}{{ m.label }} ({% if mh == "http" %}{{ m.url }}{% else %}{{ m.url | absolute_url }}{% endif %}){% unless forloop.last %}; {% endunless %}{% endfor %}.{% endif %}
+  {%- if p.awards %} Awards: {{ p.awards | join: "; " }}.{% endif %}
+  {%- if p.media %} Media coverage: {% for m in p.media %}"{{ m.title }}", {{ m.outlet }}, {{ m.date }}{% unless forloop.last %}; {% endunless %}{% endfor %}.{% endif %}
+{%- endfor %}
+{% endfor %}

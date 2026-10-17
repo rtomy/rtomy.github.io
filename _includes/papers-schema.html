@@ -1,0 +1,65 @@
+{%- comment -%}
+  Structured description of every paper (schema.org ScholarlyArticle) for
+  search engines and AI tools. Built from _data/research.yml. Authors are
+  listed as a set, not in the paper's author order.
+{%- endcomment -%}
+{%- assign person_id = "/#person" | absolute_url -%}
+{%- assign research_url = "/research/" | absolute_url -%}
+{%- assign total = 0 -%}
+{%- for area in site.data.research -%}{%- assign total = total | plus: area.papers.size -%}{%- endfor -%}
+{%- assign n = 0 -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+  {%- for area in site.data.research %}
+  {%- for p in area.papers %}
+    {%- assign n = n | plus: 1 -%}
+    {%- assign head = p.url | slice: 0, 4 | downcase -%}
+    {%- if head == "http" -%}{%- assign link = p.url -%}{%- else -%}{%- assign link = p.url | absolute_url -%}{%- endif -%}
+    {%- if p.coauthors -%}
+      {%- assign coauthors = p.coauthors | replace: " and ", ", " | split: ", " -%}
+    {%- else -%}
+      {%- assign coauthors = "" | split: "" -%}
+    {%- endif -%}
+    {%- assign slug = p.title | slugify -%}
+    {%- assign year = p.citation | slice: 0, 4 | plus: 0 -%}
+    {%- if p.journal -%}
+      {%- if year > 1900 -%}{%- assign status = "Published" -%}{%- else -%}{%- assign status = p.citation | default: "Accepted" -%}{%- endif -%}
+    {%- else -%}
+      {%- assign status = p.status | default: "Working paper" -%}
+    {%- endif %}
+    {
+      "@type": "ScholarlyArticle",
+      "@id": {{ research_url | append: "#" | append: slug | jsonify }},
+      "name": {{ p.title | jsonify }},
+      {%- if p.url %}
+      "url": {{ link | jsonify }},
+      {%- endif %}
+      "author": [
+        { "@type": "Person", "@id": {{ person_id | jsonify }}, "name": {{ site.author.name | jsonify }} }
+        {%- for c in coauthors %},
+        { "@type": "Person", "name": {{ c | strip | jsonify }} }
+        {%- endfor %}
+      ],
+      {%- if p.journal %}
+      "isPartOf": { "@type": "Periodical", "name": {{ p.journal | jsonify }} },
+      {%- endif %}
+      {%- if p.journal and year > 1900 %}
+      "datePublished": "{{ year }}",
+      {%- endif %}
+      {%- if p.abstract %}
+      "abstract": {{ p.abstract | strip | jsonify }},
+      {%- endif %}
+      {%- if p.image %}
+      "image": {{ p.image | absolute_url | jsonify }},
+      {%- endif %}
+      "creativeWorkStatus": {{ status | jsonify }},
+      "about": {{ area.section | jsonify }},
+      "mainEntityOfPage": {{ research_url | jsonify }}
+    }{% if n < total %},{% endif %}
+  {%- endfor %}
+  {%- endfor %}
+  ]
+}
+</script>

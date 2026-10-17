@@ -19,6 +19,10 @@ before publishing.
   compiler needed).
 - GitHub Pages only runs whitelisted plugins; this site uses jekyll-seo-tag
   and jekyll-sitemap.
+- `llms.txt` (summary for AI tools) and the schema.org JSON-LD in
+  `_includes/person-schema.html` and `_includes/papers-schema.html` are
+  generated from `_config.yml`, `index.md` and `_data/research.yml`; never
+  hand-edit their output. JSON-LD author lists are a set, not author order.
 - `google9bb68badd1917431.html` at the top level is Google Search Console's
   ownership check. Keep it there unchanged; it is kept out of the sitemap in
   `_config.yml`.

@@ -21,6 +21,15 @@ author:
   name: Rimmy E. Tomy
   position: Associate Professor of Accounting
   institution: Penn State Smeal College of Business
+  university: The Pennsylvania State University
+  # Used in the information the site gives search engines and AI tools.
+  other_names:
+    - Rimmy Elizabeth Tomy
+    - Rimmy Tomy
+  education:
+    - Stanford University
+    - University of Colorado Boulder
+    - St. Stephen's College, University of Delhi
   email: rtomy@psu.edu
   linkedin: https://www.linkedin.com/in/rimmy-e-tomy-0235472b7/
   # Photo on the home page. To change it, upload a new photo to the files
@@ -49,11 +58,13 @@ goatcounter: "rtomy"
 twitter:
   card: summary
 
-# Profiles listed in search-engine data about you.
+# Your profiles elsewhere. Search engines and AI tools use these to recognize
+# that they are all you. Add Google Scholar, SSRN or ORCID addresses here.
 social:
   name: Rimmy E. Tomy
   links:
     - https://www.linkedin.com/in/rimmy-e-tomy-0235472b7/
+    - https://directory.smeal.psu.edu/rqt5096
 
 # -----------------------------------------------------------------------------
 #  Technical settings. You should not need to change anything below.

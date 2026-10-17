@@ -1,0 +1,45 @@
+{%- comment -%}
+  Structured description of the site owner (schema.org Person) for search
+  engines and AI tools. Built from _config.yml and _data/research.yml.
+{%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": {{ "/#person" | absolute_url | jsonify }},
+  "name": {{ site.author.name | jsonify }},
+  {%- if site.author.other_names %}
+  "alternateName": {{ site.author.other_names | jsonify }},
+  {%- endif %}
+  "jobTitle": {{ site.author.position | jsonify }},
+  "worksFor": {
+    "@type": "CollegeOrUniversity",
+    "name": {{ site.author.institution | jsonify }}
+    {%- if site.author.university %},
+    "parentOrganization": { "@type": "CollegeOrUniversity", "name": {{ site.author.university | jsonify }} }
+    {%- endif %}
+  },
+  {%- if site.author.education %}
+  "alumniOf": [
+    {%- for school in site.author.education %}
+    { "@type": "CollegeOrUniversity", "name": {{ school | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  {%- endif %}
+  "knowsAbout": [
+    {%- for area in site.data.research %}
+    {{ area.section | jsonify }}{% unless forloop.last %},{% endunless %}
+    {%- endfor %}
+  ],
+  {%- if site.author.photo %}
+  "image": {{ site.author.photo | absolute_url | jsonify }},
+  {%- endif %}
+  {%- if site.author.email %}
+  "email": {{ site.author.email | prepend: "mailto:" | jsonify }},
+  {%- endif %}
+  {%- if site.social.links %}
+  "sameAs": {{ site.social.links | jsonify }},
+  {%- endif %}
+  "url": {{ "/" | absolute_url | jsonify }}
+}
+</script>

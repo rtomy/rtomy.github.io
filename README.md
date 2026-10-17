@@ -21,6 +21,10 @@ run.
 The `_layouts` and `_includes` folders hold the page design and rarely need
 touching.
 
+Search engines and AI tools also get a machine-readable description of you and
+each paper, plus a plain-text summary at <https://rtomy.github.io/llms.txt>.
+Both are built from the files above and update themselves.
+
 ## Making a change on github.com
 
 **Edit text** (bio, a paper, settings)

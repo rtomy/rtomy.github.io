@@ -56,5 +56,16 @@
     });
   </script>
   {%- endif %}
+
+  {%- if site.statcounter_project and site.statcounter_project != "" and jekyll.environment == "production" %}
+  <!-- StatCounter, invisible mode: no badge or counter is shown on the page. -->
+  <script>
+    var sc_project = {{ site.statcounter_project }};
+    var sc_invisible = 1;
+    var sc_security = "{{ site.statcounter_security }}";
+  </script>
+  <script async src="https://www.statcounter.com/counter/counter.js"></script>
+  <noscript><img src="https://c.statcounter.com/{{ site.statcounter_project }}/0/{{ site.statcounter_security }}/1/" alt="" width="1" height="1" style="position:absolute;left:-9999px"></noscript>
+  {%- endif %}
 </body>
 </html>

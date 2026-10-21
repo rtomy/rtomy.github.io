@@ -27,7 +27,10 @@ before publishing.
   ownership check. Keep it there unchanged; it is kept out of the sitemap in
   `_config.yml`.
 - Analytics: GoatCounter (`goatcounter:` in `_config.yml`; dashboard at
-  rtomy.goatcounter.com). The script and the PDF-click events are in
+  rtomy.goatcounter.com) and StatCounter (`statcounter_project:` and
+  `statcounter_security:` in `_config.yml`; dashboard at statcounter.com).
+  Both scripts and the GoatCounter PDF-click events are in
   `_layouts/default.html` and load only in production builds, so local
-  previews are never counted. The owner chose GoatCounter specifically to
-  avoid recording visitor IP addresses.
+  previews are never counted. StatCounter runs in invisible mode (no badge
+  on the page); the owner wants tracking kept unobtrusive, so never add a
+  visible counter or badge.

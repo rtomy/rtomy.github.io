@@ -54,6 +54,13 @@ nav:
 # https://NAME.goatcounter.com. Leave it blank to turn statistics off.
 goatcounter: "rtomy"
 
+# Visitor statistics with StatCounter (records visitor location, device, pages
+# viewed, and IP address). Copy the "Project ID" and "Security Code" from
+# statcounter.com > My Projects > your project > Settings. The counter runs in
+# invisible mode, so nothing appears on the page. Leave both blank to turn it off.
+statcounter_project: "13361432"
+statcounter_security: "4d574606"
+
 # Small square preview (rather than a wide banner) when the site is shared.
 twitter:
   card: summary
